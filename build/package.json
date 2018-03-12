@@ -1,0 +1,32 @@
+{
+  "name": "hubot",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Maurice Kaag <mkaag@me.com>",
+  "description": "Helpful robot for you",
+  "dependencies": {
+    "hubot": "^2.12.0",
+    "hubot-auth": "^1.2.0",
+    "hubot-codinglove": "^0.2.5",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-gitlab-hooks": "^0.2.0",
+    "hubot-google-images": "^0.1.4",
+    "hubot-google-translate": "^0.1.0",
+    "hubot-help": "^0.1.1",
+    "hubot-maps": "0.0.2",
+    "hubot-motivate": "^3.0.0",
+    "hubot-newrelic2": "^0.2.4",
+    "hubot-pugme": "^0.1.0",
+    "hubot-redis-brain": "0.0.2",
+    "hubot-rules": "^0.1.0",
+    "hubot-scripts": "^2.5.16",
+    "hubot-seen": "^0.2.2",
+    "hubot-shipit": "^0.2.0",
+    "hubot-slack": "^3.3.0",
+    "hubot-thank-you": "0.0.3",
+    "hubot-youtube": "^0.1.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

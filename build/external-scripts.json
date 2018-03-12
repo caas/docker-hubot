@@ -1,0 +1,17 @@
+[
+  "hubot-auth",
+  "hubot-codinglove",
+  "hubot-diagnostics",
+  "hubot-google-images",
+  "hubot-google-translate",
+  "hubot-help",
+  "hubot-maps",
+  "hubot-motivate",
+  "hubot-pugme",
+  "hubot-redis-brain",
+  "hubot-rules",
+  "hubot-seen",
+  "hubot-shipit",
+  "hubot-thank-you",
+  "hubot-youtube"
+]

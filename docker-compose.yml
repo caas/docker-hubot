@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  db:
+    image: redis:latest
+    volumes:
+      - /Users/sadafkausar/hubot-docker/db_data:/data
+    restart: always
+
+  hubot:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile-hubot
+    volumes:
+      - /Users/sadafkausar/hubot-docker/hubot_scripts:/opt/scripts
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      HUBOT_NAME: jenkinbot
+      HUBOT_SLACK_TOKEN: xoxb-301944675075-yAgBVGBVMP27zFcasDe8TRNp
+      HUBOT_JENKINS_URL: http://192.168.43.112:8010
+      HUBOT_JENKINS_AUTH: amjad:hussain
+      HUBOT_JENKINS_CRUMB: 85440a3f1fd3222b379e3c113eaf4712
+
+  jenkins:
+    depends_on:
+      - hubot
+    image: jenkins:latest
+    volumes:
+      - /Users/sadafkausar/hubot-docker/jenkins_home:/var/jenkins_home
+    ports:
+      - "8010:8080"
+      - "50000:50000"
+    restart: always
+
+volumes:
+  db_data:
+  hubot_scripts:
+  jenkins_home:
+
+
